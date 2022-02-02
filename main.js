@@ -5,9 +5,6 @@ async function createPdf() {
   const pdfDoc = await PDFDocument.create()
   var myUploadedFile = document.getElementById("myFile").files[0];
   const existingPdfBytes = await myUploadedFile.arrayBuffer()
-  // return
-  //
-  // const existingPdfBytes = await fetch(url).then(res => res.arrayBuffer())
 
   document.getElementById("button").innerText = "Creating PDF! (This might take a minute)"
   const [uploadedPdfDoc] = await pdfDoc.embedPdf(existingPdfBytes);
