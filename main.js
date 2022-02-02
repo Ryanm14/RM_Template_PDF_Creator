@@ -24,7 +24,7 @@ async function createPdf() {
   document.getElementById("button").innerText = "PDF Created! Downloading!"
 
   // Trigger the browser to download the PDF document
-  download(pdfBytes, "pdf-lib_creation_example.pdf", "application/pdf");
+  download(pdfBytes, "rm-pdf-template.pdf", "application/pdf");
 }
 
 document.getElementById("button").onclick = () => createPdf()
